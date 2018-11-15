@@ -47,20 +47,20 @@ happy counting!
 
 //next 9 are names of the pinouts of the outbound signals (code applies voltages), so change based on where you plugged things in
 
-int digtwoA = 1;
-int digtwoB = 2;
-int digtwoC = 3;
-int digtwoD = 4;
-int digoneA = 5;
-int digoneB = 6;
-int digoneC = 7;
-int digoneD = 8;
+int digtwoA = 2;
+int digtwoB = 3;
+int digtwoC = 4;
+int digtwoD = 5;
+int digoneA = 6;
+int digoneB = 7;
+int digoneC = 8;
+int digoneD = 9;
 
 //these are also named pins, but of inbound signals (code is checking for voltages), change based on where you plugged things in
 
-int magSizeUp = 9;
-int magSizeDown = 10;
-int irbeam  = 11;
+int irbeam  = 1;
+int magSizeUp = 10;
+int magSizeDown = 11;
 int insertMagSensor = 12;
 
 //this variable is what we paste the IR beam results to, all it does is simplify writing, dont change 
