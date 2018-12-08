@@ -10,7 +10,6 @@
 #define ACTUATOR_PIN 11  //sets solenoid pusher pin to 11
 #define POT_PIN 1        //sets poteniometer pin to 12
 
-
 Servo flywheelESC;                              //create servo object to control the esc 
 Button trigger(TRIGGER_PIN, 25, true, true);    //creates trigger button, read button library for syntax
 
@@ -28,8 +27,7 @@ void setup() {
 }                                       
 
 void loop() {
-  trigger.read();     //only time the trigger is actually checked, 
-
+  trigger.read();     //only time the trigger is actually checked,
   //semiAutoFire();
   pulseFire();
 }
@@ -51,7 +49,6 @@ void semiAutoFire () {
 }
 */
 void pulseFire() {
-
   if(trigger.wasPressed()){     
     flywheelESC.writeMicroseconds(map(map(analogRead(POT_PIN), 0, 1023, 0, 100), 0, 100, 1140, 1860));
     delay(10);
