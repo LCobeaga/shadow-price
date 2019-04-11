@@ -1,5 +1,5 @@
 //luca cobeaga, brushless and solenoid flywheel blaster SHADOW PRICE
-//last updated 04/10/19
+//last updated 04/11/19
 //for the JC_Button.h library go to https://github.com/JChristensen/JC_Button and download to your libraries in arduino IDE
 //lucacobeaga@gmail.com for questions
 
@@ -39,10 +39,8 @@ void loop() {
     AutoFire();
   }
 
-  else{
-    AutoFire();
-    //pulseFire();
-  }
+  AutoFire();
+  //pulseFire();
 
 }
 
@@ -53,14 +51,13 @@ void AutoFire() {
 
     revSequence();
 
-  while(trigger.isPressed()){
-    digitalWrite(ACTUATOR_PIN,HIGH);      //gives a signal to MOSFET to allow current flow (N-channel MOSFETs are like normally closed switches you open with positive current)
-    delay(90);                            //gives signal for 90 milliseconds since solenoid would stay out of not given a low signal
-    digitalWrite(ACTUATOR_PIN,LOW);       //closes current flow to solenoid
-    delay(90);
-    trigger.read();
-   } 
-
+    while(trigger.isPressed()){
+      digitalWrite(ACTUATOR_PIN,HIGH);      //gives a signal to MOSFET to allow current flow (N-channel MOSFETs are like normally closed switches you open with positive current)
+      delay(90);                            //gives signal for 90 milliseconds since solenoid would stay out of not given a low signal
+      digitalWrite(ACTUATOR_PIN,LOW);       //closes current flow to solenoid
+      delay(90);
+      trigger.read();
+    } 
   } 
 
   flywheelESC.writeMicroseconds(1060); //gives lowest tested value where motors move so trigger can be more responsive, but draws more current so you need a big battery
@@ -77,7 +74,7 @@ void pulseFire() {
       digitalWrite(ACTUATOR_PIN,HIGH);
       delay(70);
       digitalWrite(ACTUATOR_PIN,LOW);
-      delay(100);
+      delay(90);
     }
   } 
 
