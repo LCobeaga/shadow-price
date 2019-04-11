@@ -90,5 +90,5 @@ void revSequence(){
   flywheelESC.writeMicroseconds(1860);                //max speed to get best acceleration
   delay(map(analogRead(POT_PIN), 0, 1023, 15, 0));    //delay inverse to speed to accelerate to below speed
   flywheelESC.writeMicroseconds(map(map(analogRead(POT_PIN), 0, 1023, 0, 100), 0, 100, 1300, 1860));
-  delay(100);
+  delay(70);
 }
