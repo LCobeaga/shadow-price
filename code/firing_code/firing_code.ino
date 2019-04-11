@@ -1,7 +1,7 @@
 //luca cobeaga, brushless and solenoid flywheel blaster SHADOW PRICE
-//last updated 02/08/19
+//last updated 04/10/19
 //for the JC_Button.h library go to https://github.com/JChristensen/JC_Button and download to your libraries in arduino IDE
-//lucaslegos@gmail.com for questions
+//lucacobeaga@gmail.com for questions
 
 #include <JC_Button.h>   //include code libraries for a button with debounce, effectively its like a cited source, and below im writing the evience i gained from reading it
 #include <Servo.h>       //include code libraries for servos, this is PWM and is how we are contrlling the brushless motors
@@ -40,8 +40,8 @@ void loop() {
   }
 
   else{
-    //AutoFire();
-    pulseFire();
+    AutoFire();
+    //pulseFire();
   }
 
 }
@@ -53,12 +53,12 @@ void AutoFire() {
 
     revSequence();
 
-  while(trigger.wasPressed()){
+  while(trigger.isPressed()){
     digitalWrite(ACTUATOR_PIN,HIGH);      //gives a signal to MOSFET to allow current flow (N-channel MOSFETs are like normally closed switches you open with positive current)
     delay(90);                            //gives signal for 90 milliseconds since solenoid would stay out of not given a low signal
     digitalWrite(ACTUATOR_PIN,LOW);       //closes current flow to solenoid
-    trigger.read();                       //only time the trigger is actually checked
-
+    delay(90);
+    trigger.read();
    } 
 
   } 
