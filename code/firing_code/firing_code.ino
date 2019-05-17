@@ -1,6 +1,6 @@
 
 //luca cobeaga, brushless and solenoid flywheel blaster SHADOW PRICE
-//last updated 04/11/19
+//last updated 05/16/19
 //for the JC_Button.h library go to https://github.com/JChristensen/JC_Button and download to your libraries in arduino IDE
 //lucacobeaga@gmail.com for questions
 
@@ -85,9 +85,8 @@ void pulseFire() {
 
 
 void revSequence(){
-  flywheelESC.writeMicroseconds(1860);                //max speed to get best acceleration
-  delay(map(analogRead(POT_PIN), 0, 1023, 55, 30));    //delay inverse to speed to accelerate to below speed
+  flywheelESC.writeMicroseconds(1860);                  //max speed to get best acceleration
+  delay(map(analogRead(POT_PIN), 0, 1023, 150, 50));    //delay inverse to speed to accelerate to below speed
   flywheelESC.writeMicroseconds(map(map(analogRead(POT_PIN), 0, 1023, 0, 100), 0, 100, 1250, 1650));
-  delay(20);
+  delay(70);
 }
-
