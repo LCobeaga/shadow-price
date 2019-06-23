@@ -1,17 +1,12 @@
 /*
-Luca Cobeaga's (u/Band3rsnach) 
+Luca Cobeaga (u/Band3rsnach) 
 
-Stupidly Simple Open Source Ammo Counter Code
-
-
-last updated 11/6/18
+Ammo Counter Code
 
 
-last edited by: 
+last updated 06/23/19
 
 
-feel free to edit code based on your hardware needs and magazine choices! and add your name to the edited by list
- 
 as this is open source I cant stop anyone from taking credit for my code, but I ask that you please give me credit if you do use this 
 
 i tried to add comments to all code because im bad at this stuff, so if you are confused look at what i wrote to clear up confusion, or direct message me 
@@ -28,7 +23,7 @@ thus this ammo counter has some specific hardware limit:
    bottom of this code to make numbers, and plug the common into Vcc for common anode or Gnd for common cathode
 
 
-ill call out what variables you need to change to edit the:
+Definitions:
 
 MAXmag - Maximum Magazine capacity, as in the largest magazine you own that will be shot with this ammo counter (mine is a 35 dart drum, so my MAXmag is 35)
 
@@ -39,29 +34,25 @@ BASEmag - BASE magazine size, as in the value that is displayed the moment the a
 
 oh and to note, this counter only supports up to 99 rounds in a magazine, if you want to go up to 999 (for like a proton pack or something) you need to add another digit
 and another decoder, and add a digthree A through D
-
-
-
-happy counting!
 */
 
 //next 9 are names of the pinouts of the outbound signals (code applies voltages), so change based on where you plugged things in
 
-int digtwoA = 2;
-int digtwoB = 3;
-int digtwoC = 4;
-int digtwoD = 5;
-int digoneA = 6;
-int digoneB = 7;
-int digoneC = 8;
-int digoneD = 9;
+#define DIG_TWO_A 2
+#define DIG_TWO_B 3
+#define DIG_TWO_C 4
+#define DIG_TWO_D 5
+#define DIG_ONE_A 6
+#define DIG_ONE_B 7
+#define DIG_ONE_C 8
+#define DIG_ONE_D 9
 
 //these are also named pins, but of inbound signals (code is checking for voltages), change based on where you plugged things in
 
-int irbeam  = 1;
-int magSizeUp = 10;
-int magSizeDown = 11;
-int insertMagSensor = 12;
+#define IR_BEAM 1
+#define MAG_SIZE_UP 10
+#define MAG_SIZE_DOWN 11
+#define MAG_SENSOR 12
 
 //this variable is what we paste the IR beam results to, all it does is simplify writing, dont change 
 
@@ -78,40 +69,40 @@ void setup() {
 //this is just telling the code what each pin does, so all the variables above are called upon down here
 //think like algebra 2 where you plug in the value for the variable
   
-pinMode(digoneA,OUTPUT);
-pinMode(digoneB,OUTPUT);
-pinMode(digoneC,OUTPUT);
-pinMode(digoneD,OUTPUT);
-pinMode(digtwoA,OUTPUT);
-pinMode(digtwoB,OUTPUT);
-pinMode(digtwoC,OUTPUT);
-pinMode(digtwoD,OUTPUT);
-pinMode(magSizeUp,INPUT_PULLUP);        //for all 3 im turning on an internal resistor so when it sees the voltage pass through it doesnt burn the chip
-pinMode(magSizeDown,INPUT_PULLUP);
-pinMode(insertMagSensor,INPUT_PULLUP);
-pinMode(irbeam,INPUT);
+pinMode(DIG_ONE_A,OUTPUT);
+pinMode(DIG_ONE_B,OUTPUT);
+pinMode(DIG_ONE_C,OUTPUT);
+pinMode(DIG_ONE_D,OUTPUT);
+pinMode(DIG_TWO_A,OUTPUT);
+pinMode(DIG_TWO_B,OUTPUT);
+pinMode(DIG_TWO_C,OUTPUT);
+pinMode(DIG_TWO_D,OUTPUT);
+pinMode(MAG_SIZE_UP,INPUT_PULLUP);        //for all 3 im turning on an internal resistor so when it sees the voltage pass through it doesnt burn the chip
+pinMode(MAG_SIZE_DOWN,INPUT_PULLUP);
+pinMode(MAG_SENSOR,INPUT_PULLUP);
+pinMode(IR_BEAM,INPUT);
 
-digitalWrite(irbeam, HIGH);    //turns on ir beam light
+digitalWrite(IR_BEAM, HIGH);    //turns on ir beam light
 }
 
 void loop() {
-  sensorState = digitalRead(irbeam);                //sets output of irbeam to the variable sensorstate
+  sensorState = digitalRead(IR_BEAM);                //sets output of IR_BEAM to the variable sensorstate
   func(CURRENTmag);                                 //func is all the binary for the decoders saved and CURRENTmag is the CURRENT magazine size
   
-  while(!digitalRead(insertMagSensor)==LOW){       //this keeps code within this loop until statement is true
+  while(!digitalRead(MAG_SENSOR)==LOW){       //this keeps code within this loop until statement is true
     buttonValue();                                  //the function that allows the up and down buttons to change BASE magazine size
     func(BASEmag);                                  //displays the BASE magazine size 
     CURRENTmag=BASEmag;                             //sets the CURRENT magazine size to the BASE magazine size
   }
   
-  if(digitalRead(insertMagSensor)==LOW&&sensorState==LOW){    //checks if the magazine is inserted AND if a dart passed the sensor
+  if(digitalRead(MAG_SENSOR)==LOW&&sensorState==LOW){    //checks if the magazine is inserted AND if a dart passed the sensor
   CURRENTmag--;                                                //makes the CURRENT magazine size decrease by 1
   delay(100);                                                  //debounce, if this wasnt here some darts could actaully set off the breakbeam twice 
   }
 }
 
 void buttonValue(){                    //the function that allows the up and down buttons to change the BASE magazine size
-  if(digitalRead(magSizeUp)==LOW){    //looks to see if you are pressing the up button
+  if(digitalRead(MAG_SIZE_UP)==LOW){    //looks to see if you are pressing the up button
     delay(100);                        //debounce
     if (BASEmag<MAXmag){               //checks to see if the BASE magazine size is less than 35, if you have larger magazine size you change this and add code below
     BASEmag = ++BASEmag;               //increases BASE magazine size by 1
@@ -120,7 +111,7 @@ void buttonValue(){                    //the function that allows the up and dow
       BASEmag = 0;                     //if you reach a value greater than maximum magazine size it cycles back to 0
     }
   }
-  if(digitalRead(magSizeDown)==LOW){   //looks to see if you are pressing the down button
+  if(digitalRead(MAG_SIZE_DOWN)==LOW){   //looks to see if you are pressing the down button
     delay(100);                         //debugger
     if(BASEmag>0){                      //looks to see if BASE magazine size is greater than 0
       BASEmag = --BASEmag;              //decrease BASE magazine size by 1
@@ -139,73 +130,73 @@ it works by an else if statement, where the first statement, in order, found to 
  */
   if(CURRENTmag<10){
  //zero
-  digitalWrite(digoneA,LOW);
-  digitalWrite(digoneB,LOW);
-  digitalWrite(digoneC,LOW);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,LOW);
+  digitalWrite(DIG_ONE_B,LOW);
+  digitalWrite(DIG_ONE_C,LOW);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<20){
  //teens
-  digitalWrite(digoneA,HIGH);
-  digitalWrite(digoneB,LOW);
-  digitalWrite(digoneC,LOW);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,HIGH);
+  digitalWrite(DIG_ONE_B,LOW);
+  digitalWrite(DIG_ONE_C,LOW);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<30){
  //twenty
-  digitalWrite(digoneA,LOW);
-  digitalWrite(digoneB,HIGH);
-  digitalWrite(digoneC,LOW);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,LOW);
+  digitalWrite(DIG_ONE_B,HIGH);
+  digitalWrite(DIG_ONE_C,LOW);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<40){
  //thirty
-  digitalWrite(digoneA,HIGH);
-  digitalWrite(digoneB,HIGH);
-  digitalWrite(digoneC,LOW);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,HIGH);
+  digitalWrite(DIG_ONE_B,HIGH);
+  digitalWrite(DIG_ONE_C,LOW);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<50){
  //fourty
-  digitalWrite(digoneA,LOW);
-  digitalWrite(digoneB,LOW);
-  digitalWrite(digoneC,HIGH);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,LOW);
+  digitalWrite(DIG_ONE_B,LOW);
+  digitalWrite(DIG_ONE_C,HIGH);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<60){
  //fifty
-  digitalWrite(digoneA,HIGH);
-  digitalWrite(digoneB,LOW);
-  digitalWrite(digoneC,HIGH);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,HIGH);
+  digitalWrite(DIG_ONE_B,LOW);
+  digitalWrite(DIG_ONE_C,HIGH);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<70){
  //sixty
-  digitalWrite(digoneA,LOW);
-  digitalWrite(digoneB,HIGH);
-  digitalWrite(digoneC,HIGH);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,LOW);
+  digitalWrite(DIG_ONE_B,HIGH);
+  digitalWrite(DIG_ONE_C,HIGH);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<80){
  //seventy
-  digitalWrite(digoneA,HIGH);
-  digitalWrite(digoneB,HIGH);
-  digitalWrite(digoneC,HIGH);
-  digitalWrite(digoneD,LOW);
+  digitalWrite(DIG_ONE_A,HIGH);
+  digitalWrite(DIG_ONE_B,HIGH);
+  digitalWrite(DIG_ONE_C,HIGH);
+  digitalWrite(DIG_ONE_D,LOW);
   }
   else if(CURRENTmag<90){
  //eighty
-  digitalWrite(digoneA,LOW);
-  digitalWrite(digoneB,LOW);
-  digitalWrite(digoneC,LOW);
-  digitalWrite(digoneD,HIGH);
+  digitalWrite(DIG_ONE_A,LOW);
+  digitalWrite(DIG_ONE_B,LOW);
+  digitalWrite(DIG_ONE_C,LOW);
+  digitalWrite(DIG_ONE_D,HIGH);
   }
   else if(CURRENTmag<100){
  //ninety
-  digitalWrite(digoneA,HIGH);
-  digitalWrite(digoneB,LOW);
-  digitalWrite(digoneC,LOW);
-  digitalWrite(digoneD,HIGH);
+  digitalWrite(DIG_ONE_A,HIGH);
+  digitalWrite(DIG_ONE_B,LOW);
+  digitalWrite(DIG_ONE_C,LOW);
+  digitalWrite(DIG_ONE_D,HIGH);
   }
   
 /* 
@@ -217,72 +208,72 @@ a modulus pretty much divides the first value by the second, and returns the REM
   
   if(CURRENTmag % 10 == 0){
  //zero
-  digitalWrite(digtwoA,LOW);
-  digitalWrite(digtwoB,LOW);
-  digitalWrite(digtwoC,LOW);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,LOW);
+  digitalWrite(DIG_TWO_B,LOW);
+  digitalWrite(DIG_TWO_C,LOW);
+  digitalWrite(DIG_TWO_D,LOW);
   }
     if(CURRENTmag % 10 == 1){
   //one
-  digitalWrite(digtwoA,HIGH);
-  digitalWrite(digtwoB,LOW);
-  digitalWrite(digtwoC,LOW);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,HIGH);
+  digitalWrite(DIG_TWO_B,LOW);
+  digitalWrite(DIG_TWO_C,LOW);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 2){
   //two
-  digitalWrite(digtwoA,LOW);
-  digitalWrite(digtwoB,HIGH);
-  digitalWrite(digtwoC,LOW);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,LOW);
+  digitalWrite(DIG_TWO_B,HIGH);
+  digitalWrite(DIG_TWO_C,LOW);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 3){
   //three
- digitalWrite(digtwoA,HIGH);
-  digitalWrite(digtwoB,HIGH);
-  digitalWrite(digtwoC,LOW);
-  digitalWrite(digtwoD,LOW);
+ digitalWrite(DIG_TWO_A,HIGH);
+  digitalWrite(DIG_TWO_B,HIGH);
+  digitalWrite(DIG_TWO_C,LOW);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 4){
   //four
-  digitalWrite(digtwoA,LOW);
-  digitalWrite(digtwoB,LOW);
-  digitalWrite(digtwoC,HIGH);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,LOW);
+  digitalWrite(DIG_TWO_B,LOW);
+  digitalWrite(DIG_TWO_C,HIGH);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 5){
   //five
-  digitalWrite(digtwoA,HIGH);
-  digitalWrite(digtwoB,LOW);
-  digitalWrite(digtwoC,HIGH);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,HIGH);
+  digitalWrite(DIG_TWO_B,LOW);
+  digitalWrite(DIG_TWO_C,HIGH);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 6){
   //six
-  digitalWrite(digtwoA,LOW);
-  digitalWrite(digtwoB,HIGH);
-  digitalWrite(digtwoC,HIGH);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,LOW);
+  digitalWrite(DIG_TWO_B,HIGH);
+  digitalWrite(DIG_TWO_C,HIGH);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 7){
   //seven
-  digitalWrite(digtwoA,HIGH);
-  digitalWrite(digtwoB,HIGH);
-  digitalWrite(digtwoC,HIGH);
-  digitalWrite(digtwoD,LOW);
+  digitalWrite(DIG_TWO_A,HIGH);
+  digitalWrite(DIG_TWO_B,HIGH);
+  digitalWrite(DIG_TWO_C,HIGH);
+  digitalWrite(DIG_TWO_D,LOW);
     }
     if(CURRENTmag % 10 == 8){
   //eight
-  digitalWrite(digtwoA,LOW);
-  digitalWrite(digtwoB,LOW);
-  digitalWrite(digtwoC,LOW);
-  digitalWrite(digtwoD,HIGH);
+  digitalWrite(DIG_TWO_A,LOW);
+  digitalWrite(DIG_TWO_B,LOW);
+  digitalWrite(DIG_TWO_C,LOW);
+  digitalWrite(DIG_TWO_D,HIGH);
     }
     if(CURRENTmag % 10 == 9){
   //nine
-  digitalWrite(digtwoA,HIGH);
-  digitalWrite(digtwoB,LOW);
-  digitalWrite(digtwoC,LOW);
-  digitalWrite(digtwoD,HIGH);
+  digitalWrite(DIG_TWO_A,HIGH);
+  digitalWrite(DIG_TWO_B,LOW);
+  digitalWrite(DIG_TWO_C,LOW);
+  digitalWrite(DIG_TWO_D,HIGH);
     }
 }
