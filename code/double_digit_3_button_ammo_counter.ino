@@ -37,15 +37,16 @@ and another decoder, and add a digthree A through D
 */
 
 //next 9 are names of the pinouts of the outbound signals (code applies voltages), so change based on where you plugged things in
+//digits are from right to left, or digit one is the tens and digit two is the ones
 
-#define DIG_TWO_A 2
-#define DIG_TWO_B 3
-#define DIG_TWO_C 4
-#define DIG_TWO_D 5
-#define DIG_ONE_A 6
-#define DIG_ONE_B 7
-#define DIG_ONE_C 8
-#define DIG_ONE_D 9
+#define DIG_ONE_A 2
+#define DIG_ONE_B 3
+#define DIG_ONE_C 4
+#define DIG_ONE_D 5
+#define DIG_TWO_A 6
+#define DIG_TWO_B 7
+#define DIG_TWO_C 8
+#define DIG_TWO_D 9
 
 //these are also named pins, but of inbound signals (code is checking for voltages), change based on where you plugged things in
 
