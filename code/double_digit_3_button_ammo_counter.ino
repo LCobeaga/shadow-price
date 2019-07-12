@@ -4,7 +4,7 @@ Luca Cobeaga (u/Band3rsnach)
 Ammo Counter Code
 
 
-last updated 06/23/19
+last updated 07/12/19
 
 
 as this is open source I cant stop anyone from taking credit for my code, but I ask that you please give me credit if you do use this 
@@ -50,7 +50,7 @@ and another decoder, and add a digthree A through D
 
 //these are also named pins, but of inbound signals (code is checking for voltages), change based on where you plugged things in
 
-#define IR_BEAM 1
+#define IR_BEAM 13
 #define MAG_SIZE_UP 10
 #define MAG_SIZE_DOWN 11
 #define MAG_SENSOR 12
@@ -90,21 +90,21 @@ void loop() {
   sensorState = digitalRead(IR_BEAM);                //sets output of IR_BEAM to the variable sensorstate
   func(CURRENTmag);                                 //func is all the binary for the decoders saved and CURRENTmag is the CURRENT magazine size
   
-  while(!digitalRead(MAG_SENSOR)==LOW){       //this keeps code within this loop until statement is true
+  while(!digitalRead(MAG_SENSOR)==HIGH){       //this keeps code within this loop until statement is true
     buttonValue();                                  //the function that allows the up and down buttons to change BASE magazine size
     func(BASEmag);                                  //displays the BASE magazine size 
     CURRENTmag=BASEmag;                             //sets the CURRENT magazine size to the BASE magazine size
   }
   
-  if(digitalRead(MAG_SENSOR)==LOW&&sensorState==LOW){    //checks if the magazine is inserted AND if a dart passed the sensor
+  if(digitalRead(MAG_SENSOR)==HIGH && !sensorState==HIGH){        //checks if the magazine is inserted AND if a dart passed the sensor
   CURRENTmag--;                                                //makes the CURRENT magazine size decrease by 1
-  delay(100);                                                  //debounce, if this wasnt here some darts could actaully set off the breakbeam twice 
+  delay(70);                                                  //debounce, if this wasnt here some darts could actaully set off the breakbeam twice 
   }
 }
 
 void buttonValue(){                    //the function that allows the up and down buttons to change the BASE magazine size
   if(digitalRead(MAG_SIZE_UP)==LOW){    //looks to see if you are pressing the up button
-    delay(100);                        //debounce
+    delay(200);                        //debounce
     if (BASEmag<MAXmag){               //checks to see if the BASE magazine size is less than 35, if you have larger magazine size you change this and add code below
     BASEmag = ++BASEmag;               //increases BASE magazine size by 1
     }
@@ -113,7 +113,7 @@ void buttonValue(){                    //the function that allows the up and dow
     }
   }
   if(digitalRead(MAG_SIZE_DOWN)==LOW){   //looks to see if you are pressing the down button
-    delay(100);                         //debugger
+    delay(200);                         //debugger
     if(BASEmag>0){                      //looks to see if BASE magazine size is greater than 0
       BASEmag = --BASEmag;              //decrease BASE magazine size by 1
     }
