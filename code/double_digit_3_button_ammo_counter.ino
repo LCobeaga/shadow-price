@@ -4,10 +4,8 @@ Luca Cobeaga (u/Band3rsnach)
 Ammo Counter Code
 
 
-last updated 07/12/19
+last updated 07/18/19
 
-
-as this is open source I cant stop anyone from taking credit for my code, but I ask that you please give me credit if you do use this 
 
 i tried to add comments to all code because im bad at this stuff, so if you are confused look at what i wrote to clear up confusion, or direct message me 
 with any questions you cant find the answer too
@@ -50,7 +48,7 @@ and another decoder, and add a digthree A through D
 
 //these are also named pins, but of inbound signals (code is checking for voltages), change based on where you plugged things in
 
-#define IR_BEAM 13
+#define IR_BEAM 14
 #define MAG_SIZE_UP 10
 #define MAG_SIZE_DOWN 11
 #define MAG_SENSOR 12
