@@ -5,6 +5,8 @@ Shadow Price
 
 ### The STLs for all components are not inhenretly in the correct priting orientation, however there are large flat areas on all parts so use your best judgement when printing and print on these faces
 
+### All minor changes to this document will be dated and placed at the bottom, major changes will be noted at the top here
+
 ## Parts List
 
 For this Blaster you will need:
@@ -286,12 +288,15 @@ The next two steps are for one of the removeable covers, make sure not to glue i
 Now other than removeable components (Which are screw in) the blaster is fully assembled. 
 I suggest that you dont glue the barrel tip assembly into the Barrrel End because its prone to breaking, and make sure that at no point do you glue the Flywheel Cover, Barrel End, Buttstock, and the Solenoid Cover/Trigger Well Right assembly to the rest of the blaster or you will be unable to insert the internals. 
 
-### Wiring
+## Wiring
 
 The blaster can be broken up into two circuits controlled by each of the Arduino Pro Minis and powered by each BEC output. 
 
 This is the diagram for the ammo counter
 ![Ammo_Counter](https://user-images.githubusercontent.com/44830532/65849465-7e005680-e2ff-11e9-8b77-181c737970da.png)
 
+# Updates 
 
+## 10/15/19
+2Xkey file was added into the barrel folder. Two of them should be printed along the longest dimention and glued together. Will requre a little less sanding than the regular key, but it will still be a tight fit.
 
