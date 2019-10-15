@@ -12,7 +12,7 @@ Shadow Price
 For this Blaster you will need:
 
 ### Hardware
-- 15 Regular sized Nerf screws (10mm long)
+- 16 Regular sized Nerf screws (10mm long)
 - 7 Small Nerf screws (5mm long)
 - two small washers that will not slide over the main screw heads (or switch two of the small screws for something like the washer screws that are used on Stryfe mag releases)
 - A small extension spring for the trigger
@@ -299,4 +299,6 @@ This is the diagram for the ammo counter
 
 ## 10/15/19
 2Xkey file was added into the barrel folder. Two of them should be printed along the longest dimention and glued together. Will requre a little less sanding than the regular key, but it will still be a tight fit.
+
+Swapped Left Panel and Stock Main in the stock folder for new versions that make use of a screw and bridging characteristics. No changes to printing orientation. Added another screw in the parts list.
 
