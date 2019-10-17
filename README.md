@@ -163,9 +163,9 @@ As a general rule, internal features will not need any support, and external fea
 A few parts (tail, stock panel left, trigger well left) have extrememly thin surfaces that are for bridging or to reduce supports. 
 If you are confident in your printer's ability to bridge use them, if not the surfaces should not cause any problems with supports. 
 
-<img width="455" alt="barrel 1" src="https://user-images.githubusercontent.com/44830532/64136892-a3a24a80-cda9-11e9-9793-a72e46d1f9ab.PNG">
+<img width="391" alt="barrel 1" src="https://user-images.githubusercontent.com/44830532/66981514-d1490780-f068-11e9-820d-53529dcd716f.PNG">
 
-Depicted: 3X Barrel Tip, Barrel End, Key, Lock
+Depicted: 3X Barrel Tip, Barrel End, 2X Key, Lock
 
 <img width="377" alt="barrel 2" src="https://user-images.githubusercontent.com/44830532/64136936-dc422400-cda9-11e9-909b-b9e248e3830e.PNG">
 
