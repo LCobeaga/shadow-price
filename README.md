@@ -7,6 +7,8 @@ Shadow Price
 
 ### All minor changes to this document will be dated and placed at the bottom, major changes will be noted at the top here
 
+# WARNING: at the moment Shadow Price cannot be printed and assembled due to geometry updates
+
 ## Parts List
 
 For this Blaster you will need:
@@ -263,26 +265,23 @@ Make sure they are securely glued and mounted in place or you might get cracks i
 15. Glue, Slot, and Screw the Main Barrel into place. Make sure it is flush against the Cage Mount both in the front and on the sides.
 <img width="295" alt="step 15" src="https://user-images.githubusercontent.com/44830532/64642004-381c3680-d3c2-11e9-9c39-b4b2ad3dd3c9.PNG">
 
-16. Glue and slot the Top Picatiny into the Solenoid Mount. 
-<img width="249" alt="step 16" src="https://user-images.githubusercontent.com/44830532/64642071-5b46e600-d3c2-11e9-914b-8639b55c537c.PNG">
-
 The next two steps are for one of the removeable covers, make sure not to glue it into the rest of the blaster.
 
-17. Glue and slot the top and bottom dovetails into the Solenoid Cover
+16. Glue and slot the top and bottom dovetails into the Solenoid Cover
 <img width="348" alt="step 17" src="https://user-images.githubusercontent.com/44830532/64642079-6437b780-d3c2-11e9-892f-894e0289772d.PNG">
 
-18. Glue and slot the Trigger Well Left into the bottom of the Solenoid cover. (Optional: glue the two at a slight inward angle so that when screwing into the blaster the panel will always fill the break at the top)
+17. Glue and slot the Trigger Well Left into the bottom of the Solenoid cover. (Optional: glue the two at a slight inward angle so that when screwing into the blaster the panel will always fill the break at the top)
 <img width="393" alt="step 18" src="https://user-images.githubusercontent.com/44830532/64642099-6e59b600-d3c2-11e9-8664-fb669392a395.PNG">
 
-19. Screw Picatiny Left & Right into the Flywheel Cover and Cage Mount, respectively.
+18. Screw Picatiny Left & Right into the Flywheel Cover and Cage Mount, respectively.
 <img width="293" alt="step 19a" src="https://user-images.githubusercontent.com/44830532/64642268-cf818980-d3c2-11e9-87bc-433de8a83b32.PNG">
 <img width="284" alt="step 19b" src="https://user-images.githubusercontent.com/44830532/64642621-a1e91000-d3c3-11e9-82e6-764d26e40b9f.PNG">
 
-20. Slot and Glue Grill left & right into the solenoid panel assembly and Solenoid Mount, respectively.
+19. Slot and Glue Grill left & right into the solenoid panel assembly and Solenoid Mount, respectively.
 <img width="307" alt="step 20a" src="https://user-images.githubusercontent.com/44830532/64642647-add4d200-d3c3-11e9-9535-a8a71d35c4bb.PNG">
 <img width="310" alt="step 20b" src="https://user-images.githubusercontent.com/44830532/64642658-b62d0d00-d3c3-11e9-8450-ef680c857333.PNG">
 
-21. Slot and Glue the three Barrel Tips together.
+20. Slot and Glue the three Barrel Tips together.
 <img width="342" alt="step 21" src="https://user-images.githubusercontent.com/44830532/64642676-bf1dde80-d3c3-11e9-9c3f-e82e4f229f25.PNG">
 
 Now other than removeable components (Which are screw in) the blaster is fully assembled. 
@@ -301,4 +300,13 @@ This is the diagram for the ammo counter
 2Xkey file was added into the barrel folder. Two of them should be printed along the longest dimention and glued together. Will requre a little less sanding than the regular key, but it will still be a tight fit.
 
 Swapped Left Panel and Stock Main in the stock folder for new versions that make use of a screw and bridging characteristics. No changes to printing orientation. Added another screw in the parts list.
+
+## 10/16/19
+made changes to a majority of body components to improve aesthetics and to remove remnant geometry from older versions. 
+
+Major changes include a block to better attach the Handle to the Trigger Well Right, combining the Solenoid Mount and Top Picatiny to prevent cracking in both parts (as observed in my personal print), and adding a 1 deg angle to the connection between the Trigger Well Left and Solenoid Cover to close shell gaps.
+
+Began to strenghten area around mag release by increasing contact between the Magwell and Knuckle Duster, however no changes have been made to the Magwell so currently the blaster is non printable. 
+
+Updated parts list photos and removed assembly step 16 pertaining to the Top Picatiny. 
 
