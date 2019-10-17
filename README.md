@@ -175,11 +175,11 @@ Depicted: Main Barrel
 
 Depicted: Battery Tray
 
-<img width="442" alt="body 1" src="https://user-images.githubusercontent.com/44830532/64136961-f7ad2f00-cda9-11e9-9658-a37eabbf196b.PNG">
+<img width="463" alt="body 1" src="https://user-images.githubusercontent.com/44830532/66980348-706c0000-f065-11e9-8fea-166e1a55f9d8.PNG">
 
-Depicted: Handle, Knuckle Duster, Left & Right Grill, Bottom Dovetail, Pusher Cover, Solenoid Cover, Top Dovetail, Top Picatiny, Trigger
+Depicted: Handle, Knuckle Duster, Left & Right Grill, Bottom Dovetail, Pusher Cover, Solenoid Cover, Top Dovetail, Trigger
 
-<img width="447" alt="body 2" src="https://user-images.githubusercontent.com/44830532/64136966-01369700-cdaa-11e9-822b-f37bc83aafab.PNG">
+<img width="440" alt="body 2" src="https://user-images.githubusercontent.com/44830532/66981285-1a4c8c00-f068-11e9-9a5a-0a9cfcc98d60.PNG">
 
 Depicted: Solenoid Mount, Tail, Trigger Well Left & Right
 
@@ -308,5 +308,5 @@ Major changes include a block to better attach the Handle to the Trigger Well Ri
 
 Began to strenghten area around mag release by increasing contact between the Magwell and Knuckle Duster, however no changes have been made to the Magwell so currently the blaster is non printable. 
 
-Updated parts list photos and removed assembly step 16 pertaining to the Top Picatiny. 
+Updated printing orientation photos and removed assembly step 16 pertaining to the Top Picatiny. 
 
