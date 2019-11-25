@@ -310,3 +310,7 @@ Began to strenghten area around mag release by increasing contact between the Ma
 
 Updated printing orientation photos and removed assembly step 16 pertaining to the Top Picatiny. 
 
+## 11/24/19
+Broke down Barrel Main into two components, Barrel Back and Barrel Middle.
+
+Replaced Barrel end with Barrel Front, now with the new attachment lugs and optimised for bridging. 
