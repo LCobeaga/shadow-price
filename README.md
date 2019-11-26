@@ -7,7 +7,7 @@
 
 ### All minor changes to this document will be dated and placed at the bottom, major changes will be noted at the top here
 
-# WARNING: Assembly instructions do not reflect recent geometry updates
+### Note: This version uses tighter tolerances on all print surfaces. You will likely have to file the removeable components to get them to slide past each other.
 
 ## Parts List
 
@@ -163,13 +163,9 @@ As a general rule, internal features will not need any support, and external fea
 A few parts (tail, stock panel left, trigger well left) have extrememly thin surfaces that are for bridging or to reduce supports. 
 If you are confident in your printer's ability to bridge use them, if not the surfaces should not cause any problems with supports. 
 
-<img width="391" alt="barrel 1" src="https://user-images.githubusercontent.com/44830532/66981514-d1490780-f068-11e9-820d-53529dcd716f.PNG">
+<img width="466" alt="barrel 1" src="https://user-images.githubusercontent.com/44830532/69666588-5698e200-1041-11ea-8b4b-11aa179b1e64.PNG">
 
-Depicted: 3X Barrel Tip, Barrel End, 2X Key, Lock
-
-<img width="377" alt="barrel 2" src="https://user-images.githubusercontent.com/44830532/64136936-dc422400-cda9-11e9-909b-b9e248e3830e.PNG">
-
-Depicted: Main Barrel
+Depicted: 3X Barrel Tip, Barrel Front, Barrel Middle, Barrel End, 2X Key, Lock
 
 <img width="377" alt="barrel 3" src="https://user-images.githubusercontent.com/44830532/64136950-ef54f400-cda9-11e9-9bcf-49d8834d395c.PNG">
 
@@ -179,9 +175,9 @@ Depicted: Battery Tray
 
 Depicted: Handle, Knuckle Duster, Left & Right Grill, Bottom Dovetail, Pusher Cover, Solenoid Cover, Top Dovetail, Trigger
 
-<img width="440" alt="body 2" src="https://user-images.githubusercontent.com/44830532/66981285-1a4c8c00-f068-11e9-9a5a-0a9cfcc98d60.PNG">
+<img width="455" alt="body 2" src="https://user-images.githubusercontent.com/44830532/69671853-b300ff00-104b-11ea-80d4-78751e6f9596.PNG">
 
-Depicted: Solenoid Mount, Tail, Trigger Well Left & Right
+Depicted: Solenoid Mount, Tail, Tail Dovetail, Trigger Well Left & Right
 
 The thin surface circled in red on Trigger Well Left is a built in support, and the Tail has a thin surface for bridging inside it. 
 
@@ -193,9 +189,9 @@ Depicted: Flywheel Smooth, High Crush Flywheel Cage
 
 Depicted : Alignment Bar, Archway, Battery Tray Latch, Bottom Dovetail, Cage Mount, Flywheel Cover, Mag Release Lever, Mag Tooth, Magazine Release, Picatiny Left & Right, Top Dovetail
 
-<img width="390" alt="magwell 2" src="https://user-images.githubusercontent.com/44830532/64136991-21665600-cdaa-11e9-95ce-55bcf8ae6c70.PNG">
+<img width="436" alt="magwell 2" src="https://user-images.githubusercontent.com/44830532/69670173-27d23a00-1048-11ea-980b-c6f1707ec580.PNG">
 
-Depicted: Magwell
+Depicted: Magwell, Insert
 
 <img width="452" alt="stock" src="https://user-images.githubusercontent.com/44830532/64137000-2b885480-cdaa-11e9-9db3-c1f82d2cca94.PNG">
 
@@ -213,79 +209,91 @@ For PLA I suggest Weldon 16, for PetG or similar Pet filaments I suggest Weldon 
 
 Ok, suggestions over, lets start assembling:
 
-1. Glue the Cage Mount, Archway, Solenoid Mount, and Tail together in a line. We will call this group the "upper reciever"
+1. Screw into place and glue down Tail Dovetail into tail
+<img width="396" alt="step -1" src="https://user-images.githubusercontent.com/44830532/69674255-f316b080-1050-11ea-9358-b441e2743280.PNG">
+
+2. Screw into place and glue Insert into Cage Mount
+
+<img width="387" alt="step -2" src="https://user-images.githubusercontent.com/44830532/69675212-fe6adb80-1052-11ea-9ed8-5aef25b8e92f.PNG">
+
+3. Glue the Cage Mount, Archway, Solenoid Mount, and Tail together in a line. We will call this group the "upper reciever"
 <img width="550" alt="step 1" src="https://user-images.githubusercontent.com/44830532/64640513-fccc3880-d3be-11e9-922f-c31bfcf743db.PNG">
 
-2. Glue and snap the Magwell and Battery Tray Latch together by aligning the circular cutout and snapping in the triangular piece. If you are using a water thin solvent snap the parts together then put a bit of solvent in between the parts.
+4. Glue and snap the Magwell and Battery Tray Latch together by aligning the circular cutout and snapping in the triangular piece. If you are using a water thin solvent snap the parts together then put a bit of solvent in between the parts.
 <img width="534" alt="step 2" src="https://user-images.githubusercontent.com/44830532/64640539-0e154500-d3bf-11e9-822c-1c777592b023.PNG">
 
-3. Glue the Alignment Tab into the Magwell. It should be a tight fit.
+5. Glue the Alignment Tab into the Magwell. It should be a tight fit.
 <img width="592" alt="step 3" src="https://user-images.githubusercontent.com/44830532/64640706-64828380-d3bf-11e9-8fba-1a3e43772bfe.PNG">
 
-4. Place the Mag Release lever into the Mag tooth and slot both into the back of the Magwell. Make sure the the cutout part of the lever faces away from the magwell, the part of the tooth that sticks out is towards the bottom of the magwell, and that **no glue** gets on any of these parts. 
+6. Place the Mag Release lever into the Mag tooth and slot both into the back of the Magwell. Make sure the the cutout part of the lever faces away from the magwell, the part of the tooth that sticks out is towards the bottom of the magwell, and that **no glue** gets on any of these parts. 
 <img width="362" alt="step 4" src="https://user-images.githubusercontent.com/44830532/64640758-811ebb80-d3bf-11e9-8cef-b5f9df81105d.PNG">
 <img width="159" alt="step 4-2" src="https://user-images.githubusercontent.com/44830532/64641143-6436b800-d3c0-11e9-9a29-64f65b38f6ea.PNG">
 
 These next two steps need to be done pretty quickly if you are not using a water thin solvent, so prepare everything before hand. 
 If you are using a water thin solvent, just dont put any solvent in until after all the pieces are locked in place. 
 
-5. Glue and slot Trigger Well Right into the back of the Magwell. This will lock in the magazine lever and tooth so it is critical you align those before gluing this piece on. This collection of pieces we will call the "lower reciever".
+7. Glue and slot Trigger Well Right into the back of the Magwell. This will lock in the magazine lever and tooth so it is critical you align those before gluing this piece on. This collection of pieces we will call the "lower reciever".
 <img width="483" alt="step 5" src="https://user-images.githubusercontent.com/44830532/64641184-7b75a580-d3c0-11e9-84bd-b136e77d047a.PNG">
 
-6. Glue, slot, and screw the upper and lower reciever together. Make sure the Alignment Tab is pushed into the back and top of the slot in the Archway, the spike on the front of the Cage Mount is flush with the cut out in the Battery Tray Latch and the screw is in place, the L shaped extrusion is in the corner of the Trigger Well Right, and that the entire top surface of the lower reciever is flush with the bottom of the upper.
+8. Glue, slot, and screw the upper and lower reciever together. Make sure the Alignment Tab is pushed into the back and top of the slot in the Archway, the spike on the front of the Cage Mount is flush with the cut out in the Battery Tray Latch and the screw is in place, the L shaped extrusion is in the corner of the Trigger Well Right, and that the entire top surface of the lower reciever is flush with the bottom of the upper.
 <img width="621" alt="step 6" src="https://user-images.githubusercontent.com/44830532/64641197-84667700-d3c0-11e9-9ab8-0187ca47143c.PNG">
 
 From here on the rest of the parts are mostly cosmetic, however they make up a lot of the length and weight of the blaster.
 Make sure they are securely glued and mounted in place or you might get cracks in the shell after painting.
 
-7. Glue and slot the Handle into the bottom of the Trigger Well Right. It should be a secure fit, just make sure you push it as far up as possible. 
+9. Glue and slot the Handle into the bottom of the Trigger Well Right. It should be a secure fit, just make sure you push it as far up as possible. 
 <img width="393" alt="step 7" src="https://user-images.githubusercontent.com/44830532/64641255-a3650900-d3c0-11e9-91f6-7eb62bb183f3.PNG">
 
-8. Place the small extension spring on to the Magazine Release pin, and insert the pair into the Knuckle Duster. Make sure the spring sits flat on the inside of the Knuckle Duster. I also suggest you paint this component before you put it in since there is no way to get it out. (Optional: add a bit of craft foam to the front of the Magazine Release to make it more comfortable to hit with your middle finger)
+10. Place the small extension spring on to the Magazine Release pin, and insert the pair into the Knuckle Duster. Make sure the spring sits flat on the inside of the Knuckle Duster. I also suggest you paint this component before you put it in since there is no way to get it out. (Optional: add a bit of craft foam to the front of the Magazine Release to make it more comfortable to hit with your middle finger)
 <img width="418" alt="step 8" src="https://user-images.githubusercontent.com/44830532/64641273-ad870780-d3c0-11e9-8405-e2780649ae30.PNG">
 
-9. Slot the Knuckle Duster assembly into the bottom of the Trigger Well Right and the bottom of the Handle, and align the Magazine Release with the Mag Release Lever, making sure that the system is free to move.
+11. Slot the Knuckle Duster assembly into the bottom of the Trigger Well Right and the bottom of the Handle, and align the Magazine Release with the Mag Release Lever, making sure that the system is free to move.
 <img width="272" alt="step 9" src="https://user-images.githubusercontent.com/44830532/64641405-fb037480-d3c0-11e9-816a-5a559ccd4f3b.PNG">
 
-10. Screw the Knuckle Duster into the bottom of the Handle and glue the top of it into the bottom of the Trigger Well Right and the Magwell. Be careful not to get glue on the release system. 
+12. Screw the Knuckle Duster into the bottom of the Handle and glue the top of it into the bottom of the Trigger Well Right and the Magwell. Be careful not to get glue on the release system. 
 <img width="375" alt="step 10" src="https://user-images.githubusercontent.com/44830532/64641427-035baf80-d3c1-11e9-90ee-019f8cb5ace8.PNG">
 
-11. Glue and slot the Stock onto the back of the Tail. Be sure to get good adhesion both inside and on the two flush surfaces. 
+13. Glue and slot the Stock onto the back of the Tail. Be sure to get good adhesion both inside and on the two flush surfaces. 
 <img width="516" alt="step 11" src="https://user-images.githubusercontent.com/44830532/64641740-a8768800-d3c1-11e9-8a10-477382c7d5c7.PNG">
 
-12. Glue and slot the four Slots into the back of the Stock. Be sure to press them in firmly or the buttplate might be wobbly.
+14. Glue and slot the four Slots into the back of the Stock. Be sure to press them in firmly or the buttplate might be wobbly.
 <img width="278" alt="step 12" src="https://user-images.githubusercontent.com/44830532/64641844-d956bd00-d3c1-11e9-8a7d-278cb4f22f36.PNG">
 
-13. Glue and slot the Right Panel onto the right side of the Stock. Make sure to get good adhesion between the front of the panel and the Tail.
+15. Glue and slot the Right Panel onto the right side of the Stock. Make sure to get good adhesion between the front of the panel and the Tail.
 <img width="242" alt="step 13" src="https://user-images.githubusercontent.com/44830532/64641866-e5427f00-d3c1-11e9-91f9-414cd8e10ce9.PNG">
 
-14. Moving back to the front of the blaster, glue and slot the Top & Bottom Dovetails to the Cage Mount and Battery Tray Latch. Make sure they are flush with the exterior of the blaster. 
+16. Moving back to the front of the blaster, glue and slot the Top & Bottom Dovetails to the Cage Mount and Battery Tray Latch. Make sure they are flush with the exterior of the blaster. 
 <img width="272" alt="step 14" src="https://user-images.githubusercontent.com/44830532/64641962-19b63b00-d3c2-11e9-9ec8-40a7ccb40f56.PNG">
 
-15. Glue, Slot, and Screw the Main Barrel into place. Make sure it is flush against the Cage Mount both in the front and on the sides.
+17. Glue and slot Barrel Middle and Barrel Back into place 
+
+<img width="459" alt="step 14b" src="https://user-images.githubusercontent.com/44830532/69675790-4f2f0400-1054-11ea-8580-8b58a79d3513.PNG">
+
+18. Glue, Slot, and Screw the Barrel assembly into place. 
+Make sure it is flush against the Cage Mount both in the front and on the sides.
 <img width="295" alt="step 15" src="https://user-images.githubusercontent.com/44830532/64642004-381c3680-d3c2-11e9-9c39-b4b2ad3dd3c9.PNG">
 
 The next two steps are for one of the removeable covers, make sure not to glue it into the rest of the blaster.
 
-16. Glue and slot the top and bottom dovetails into the Solenoid Cover
+19. Glue and slot the top and bottom dovetails into the Solenoid Cover
 <img width="348" alt="step 17" src="https://user-images.githubusercontent.com/44830532/64642079-6437b780-d3c2-11e9-892f-894e0289772d.PNG">
 
-17. Glue and slot the Trigger Well Left into the bottom of the Solenoid cover. (Optional: glue the two at a slight inward angle so that when screwing into the blaster the panel will always fill the break at the top)
+20. Glue and slot the Trigger Well Left into the bottom of the Solenoid cover. (Optional: glue the two at a slight inward angle so that when screwing into the blaster the panel will always fill the break at the top)
 <img width="393" alt="step 18" src="https://user-images.githubusercontent.com/44830532/64642099-6e59b600-d3c2-11e9-8664-fb669392a395.PNG">
 
-18. Screw Picatiny Left & Right into the Flywheel Cover and Cage Mount, respectively.
+21. Screw Picatiny Left & Right into the Flywheel Cover and Cage Mount, respectively.
 <img width="293" alt="step 19a" src="https://user-images.githubusercontent.com/44830532/64642268-cf818980-d3c2-11e9-87bc-433de8a83b32.PNG">
 <img width="284" alt="step 19b" src="https://user-images.githubusercontent.com/44830532/64642621-a1e91000-d3c3-11e9-82e6-764d26e40b9f.PNG">
 
-19. Slot and Glue Grill left & right into the solenoid panel assembly and Solenoid Mount, respectively.
+22. Slot and Glue Grill left & right into the solenoid panel assembly and Solenoid Mount, respectively.
 <img width="307" alt="step 20a" src="https://user-images.githubusercontent.com/44830532/64642647-add4d200-d3c3-11e9-9535-a8a71d35c4bb.PNG">
 <img width="310" alt="step 20b" src="https://user-images.githubusercontent.com/44830532/64642658-b62d0d00-d3c3-11e9-8450-ef680c857333.PNG">
 
-20. Slot and Glue the three Barrel Tips together.
+23. Slot and Glue the three Barrel Tips together.
 <img width="342" alt="step 21" src="https://user-images.githubusercontent.com/44830532/64642676-bf1dde80-d3c3-11e9-9c3f-e82e4f229f25.PNG">
 
 Now other than removeable components (Which are screw in) the blaster is fully assembled. 
-I suggest that you dont glue the barrel tip assembly into the Barrrel End because its prone to breaking, and make sure that at no point do you glue the Flywheel Cover, Barrel End, Buttstock, and the Solenoid Cover/Trigger Well Right assembly to the rest of the blaster or you will be unable to insert the internals. 
+I suggest that you dont glue the barrel tip assembly into the Barrrel End because its prone to breaking, and make sure that at no point do you glue the Flywheel Cover, Barrel Front, Buttstock, and the Solenoid Cover/Trigger Well Right assembly to the rest of the blaster or you will be unable to insert the internals. 
 
 ## Wiring
 
@@ -326,3 +334,13 @@ Created two new parts, Tail Dovetail and Insert.
 Tail Dovetial holds Solenoid Cover from the back and hopefully reduce flexing on Solenoid Mount.
 Insert goes inside of Cage Mount and will hopefully reduce the cracking that occurs in that area.
 Parts list updated to reflect four screws that hold the pieces in place.
+
+## 11/26/19
+Increased Insert tolerances. 
+
+Added fillets to the picatiny on Solenoid Mount to reduce the need for supports.
+
+Updated printing and assembly photos to reflect geometry changes. 
+
+NOTE: Since many changes had no effect on assembly, not all photos were switched out, so go by description and use the photos as refrence. 
+
