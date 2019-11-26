@@ -1,4 +1,4 @@
-`Shadow Price
+Shadow Price
 =====
 
 ###### Shadow Price is the culmination of many years of CADing, which I had to learn along the way, and Coding, most of which I was taught by @mochoy. It uses brushless motors for the flywheels, a solenoid pusher, and has an integrated IR beam based ammo counter. The shell is based off of the stock weapon model for an auto rifle in the video game Destiny, and my personal blaster is painted like Shadow Price. 
