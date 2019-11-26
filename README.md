@@ -14,7 +14,7 @@ Shadow Price
 For this Blaster you will need:
 
 ### Hardware
-- 16 Regular sized Nerf screws (10mm long)
+- 18 Regular sized Nerf screws (10mm long)
 - 7 Small Nerf screws (5mm long)
 - two small washers that will not slide over the main screw heads (or switch two of the small screws for something like the washer screws that are used on Stryfe mag releases)
 - A small extension spring for the trigger
@@ -314,3 +314,9 @@ Updated printing orientation photos and removed assembly step 16 pertaining to t
 Broke down Barrel Main into two components, Barrel Back and Barrel Middle.
 
 Replaced Barrel end with Barrel Front, now with the new attachment lugs and optimised for bridging. 
+
+## 11/25/19
+filled in gaps between Tail, Solenoid Mount, Solenoid Cover, Trigger Well Right, Magwell, and Archway.
+
+Created new part, Tail Dovetail, to hold Solenoid Cover from the back and hopefully reduce flexing on Solenoid Mount.
+Parts list updated to reflect two screws that hold this piece in place.
