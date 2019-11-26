@@ -1,4 +1,4 @@
-Shadow Price
+`Shadow Price
 =====
 
 ###### Shadow Price is the culmination of many years of CADing, which I had to learn along the way, and Coding, most of which I was taught by @mochoy. It uses brushless motors for the flywheels, a solenoid pusher, and has an integrated IR beam based ammo counter. The shell is based off of the stock weapon model for an auto rifle in the video game Destiny, and my personal blaster is painted like Shadow Price. 
@@ -7,7 +7,7 @@ Shadow Price
 
 ### All minor changes to this document will be dated and placed at the bottom, major changes will be noted at the top here
 
-# WARNING: at the moment Shadow Price cannot be printed and assembled due to geometry updates
+# WARNING: Assembly instructions do not reflect recent geometry updates
 
 ## Parts List
 
@@ -15,7 +15,7 @@ For this Blaster you will need:
 
 ### Hardware
 - 18 Regular sized Nerf screws (10mm long)
-- 7 Small Nerf screws (5mm long)
+- 9 Small Nerf screws (5mm long)
 - two small washers that will not slide over the main screw heads (or switch two of the small screws for something like the washer screws that are used on Stryfe mag releases)
 - A small extension spring for the trigger
 - A small compression spring for the magazine release (pen spring works)
@@ -316,7 +316,13 @@ Broke down Barrel Main into two components, Barrel Back and Barrel Middle.
 Replaced Barrel end with Barrel Front, now with the new attachment lugs and optimised for bridging. 
 
 ## 11/25/19
-filled in gaps between Tail, Solenoid Mount, Solenoid Cover, Trigger Well Right, Magwell, and Archway.
+Filled in gaps between Tail, Solenoid Mount, Solenoid Cover, Trigger Well Right, Magwell, Cage Mount, Flywheel Cover and Archway.
 
-Created new part, Tail Dovetail, to hold Solenoid Cover from the back and hopefully reduce flexing on Solenoid Mount.
-Parts list updated to reflect two screws that hold this piece in place.
+Cut out space in Magwell for the new Knuckle duster, now making the blaster printable again. 
+
+Cut a hole in the top of Cage Mount.
+
+Created two new parts, Tail Dovetail and Insert.
+Tail Dovetial holds Solenoid Cover from the back and hopefully reduce flexing on Solenoid Mount.
+Insert goes inside of Cage Mount and will hopefully reduce the cracking that occurs in that area.
+Parts list updated to reflect four screws that hold the pieces in place.
