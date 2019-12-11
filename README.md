@@ -14,8 +14,8 @@ Shadow Price
 For this Blaster you will need:
 
 ### Hardware
-- 18 Regular sized Nerf screws (10mm long)
-- 9 Small Nerf screws (5mm long)
+- 18 Regular Nerf screws (10mm long)
+- 10 Small Nerf screws (5mm long)
 - two small washers that will not slide over the main screw heads (or switch two of the small screws for something like the washer screws that are used on Stryfe mag releases)
 - A small extension spring for the trigger
 - A small compression spring for the magazine release (pen spring works)
@@ -344,3 +344,14 @@ Updated printing and assembly photos to reflect geometry changes.
 
 NOTE: Since many changes had no effect on assembly, not all photos were switched out, so go by description and use the photos as refrence. 
 
+## 12/11/19
+Multiple minor geometry changes as I print another shadow price and issues arise. 
+
+Pushed back dovetail and increased angle on Handle.
+New female side of dovetail on Trigger Well Left.
+Added screwport between Trigger Well Right and Left.
+Added reinfocement bar to Solenoid Cover to prevent cracking on small upper area.
+Removed extraneous walls in Archway to help with aethetics.
+Minor wall adjustments on Solenoid Mount so it meshes better with Archway and requires less support.
+
+Updated Parts list with extra screw.
