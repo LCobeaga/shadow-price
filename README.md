@@ -310,7 +310,7 @@ This is the diagram for the ammo counter
 Swapped Left Panel and Stock Main in the stock folder for new versions that make use of a screw and bridging characteristics. No changes to printing orientation. Added another screw in the parts list.
 
 ## 10/16/19
-made changes to a majority of body components to improve aesthetics and to remove remnant geometry from older versions. 
+Made changes to a majority of body components to improve aesthetics and to remove remnant geometry from older versions. 
 
 Major changes include a block to better attach the Handle to the Trigger Well Right, combining the Solenoid Mount and Top Picatiny to prevent cracking in both parts (as observed in my personal print), and adding a 1 deg angle to the connection between the Trigger Well Left and Solenoid Cover to close shell gaps.
 
@@ -330,10 +330,10 @@ Cut out space in Magwell for the new Knuckle duster, now making the blaster prin
 
 Cut a hole in the top of Cage Mount.
 
-Created two new parts, Tail Dovetail and Insert.
-Tail Dovetial holds Solenoid Cover from the back and hopefully reduce flexing on Solenoid Mount.
-Insert goes inside of Cage Mount and will hopefully reduce the cracking that occurs in that area.
-Parts list updated to reflect four screws that hold the pieces in place.
+- Created two new parts, Tail Dovetail and Insert.
+- Tail Dovetial holds Solenoid Cover from the back and hopefully reduce flexing on Solenoid Mount.
+- Insert goes inside of Cage Mount and will hopefully reduce the cracking that occurs in that area.
+- Parts list updated to reflect four screws that hold the pieces in place.
 
 ## 11/26/19
 Increased Insert tolerances. 
@@ -347,11 +347,26 @@ NOTE: Since many changes had no effect on assembly, not all photos were switched
 ## 12/11/19
 Multiple minor geometry changes as I print another shadow price and issues arise. 
 
-Pushed back dovetail and increased angle on Handle.
-New female side of dovetail on Trigger Well Left.
-Added screwport between Trigger Well Right and Left.
-Added reinfocement bar to Solenoid Cover to prevent cracking on small upper area.
-Removed extraneous walls in Archway to help with aethetics.
-Minor wall adjustments on Solenoid Mount so it meshes better with Archway and requires less support.
+- Pushed back dovetail and increased angle on Handle.
+- New female side of dovetail on Trigger Well Left.
+- Added screwport between Trigger Well Right and Left.
+- Added reinfocement bar to Solenoid Cover to prevent cracking on small upper area.
+- Removed extraneous walls in Archway to help with aethetics.
+- Minor wall adjustments on Solenoid Mount so it meshes better with Archway and requires less support.
 
 Updated Parts list with extra screw.
+
+## 12/14/19
+Redesigned all dovetails connecting the removeable handle cover from the blaster.
+
+- Added new part, Tail Decoration, to prevent the need for a large support tower.
+- Added a Dovetail to the side and back of Magwell and Archway. 
+- New locations for two of the screws, moved from Trigger Well Left onto Solenoid Cover.
+- Removed Top and Bottom Dovetails as they are now extraneous parts.
+
+Created new set of combined parts for larger printers (150mm+ in X or Y).
+
+- Added new parts Trigger Well Left Combined, Trigger Well Right Combined, Handle Combined.
+- Moved geometry constraining the magazine release system onto the trigger well pair, should now allow for removeable components.
+
+No changes to assembly order but some steps need to be removed due to dovetail changes.
