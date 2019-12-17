@@ -370,3 +370,19 @@ Created new set of combined parts for larger printers (150mm+ in X or Y).
 - Moved geometry constraining the magazine release system onto the trigger well pair, should now allow for removeable components.
 
 No changes to assembly order but some steps need to be removed due to dovetail changes.
+
+## 12/16/19
+Reinforced Magwell and surrounding parts
+
+ - Added bridge support to Magwell dovetail.
+ - Thickened wall on Magwell under the cage.
+ - Made the anchor for Battery Tray Latch larger.
+ - Removed extra features on inside of Cage Mount, added chamfers to reduce supports and increase strength, added extra screwport at the top of the Back Barrel connection, thickened walls and added bridge supports. 
+
+Minor changes to Solenoid Mount and Cover to reduce required support.
+
+Replaced original Trigger Well files with the Trigger Well Combined files. 
+Removed the combined files as the new dovetail geometry was not reflected in the non combined, so they were redundant.
+The Knuckle Duster does not reflect the changes on the Trigger Well files, so for now only use Handle Combined.
+
+Cleaned up extraneous surfaces on stock main.
