@@ -381,8 +381,7 @@ Reinforced Magwell and surrounding parts
 
 Minor changes to Solenoid Mount and Cover to reduce required support.
 
-Replaced original Trigger Well files with the Trigger Well Combined files. 
-Removed the combined files as the new dovetail geometry was not reflected in the non combined, so they were redundant.
-The Knuckle Duster does not reflect the changes on the Trigger Well files, so for now only use Handle Combined.
+Removed the original trigger well files as the new dovetail geometry was not reflected in their design and made them redundant.
+The Knuckle Duster does not reflect the changes on the Trigger Well Combined files, so for now only use Handle Combined.
 
 Cleaned up extraneous surfaces on stock main.
