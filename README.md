@@ -302,6 +302,9 @@ The blaster can be broken up into two circuits controlled by each of the Arduino
 This is the diagram for the ammo counter
 ![Ammo_Counter](https://user-images.githubusercontent.com/44830532/65849465-7e005680-e2ff-11e9-8b77-181c737970da.png)
 
+And this for the firing system
+![Firing_System](https://user-images.githubusercontent.com/44830532/72862203-47b95f00-3c81-11ea-8799-fa9791adb93e.png)
+
 # Updates 
 
 ## 10/15/19
