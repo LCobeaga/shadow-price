@@ -388,3 +388,10 @@ Removed the original trigger well files as the new dovetail geometry was not ref
 The Knuckle Duster does not reflect the changes on the Trigger Well Combined files, so for now only use Handle Combined.
 
 Cleaned up extraneous surfaces on stock main.
+
+## 2/12/20
+Dropped height of Battery Tray so top is planar, makes printing easier.
+
+Increased wall length of Barrel Middle and Front to match Battery Tray.
+
+
